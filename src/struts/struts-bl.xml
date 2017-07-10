@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="bl" namespace="/bl" extends="struts-default">
+    	<action name="bl_*" class="blAction" method="{1}">
+    		<result name="list">/WEB-INF/bl/list.jsp</result>
+    		<result name="saveBut">/WEB-INF/bl/save.jsp</result>
+    		<result name="save" type="redirectAction">
+    			<param name="actionName">bl_blList.action</param>
+    		</result>
+    		<result name="error">/error.jsp</result>
+    		<result name="rkview">/WEB-INF/bl/rkView.jsp</result>
+    		<result name="ckview">/WEB-INF/bl/ckView.jsp</result>
+    		<result name="updateBut">/WEB-INF/bl/update.jsp</result>
+    	</action>
+    </package>
+    
+</struts>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.chinasoft.domain">
+
+	<class name="Bl" table="tb_bls">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="num" column="num" type="string" length="64" not-null="true" unique="true"/>
+		<property name="mc" column="mc" type="string" length="255" not-null="true"/>
+		<property name="hd" column="hd" type="string" length="64"/>
+		<property name="zl" column="zl" type="string" length="64"/>
+		<property name="cd" column="cd" type="string" length="64" not-null="true"/>
+		<property name="kd" column="kd" type="string" length="64" not-null="true"/>
+		<property name="sl" column="sl" type="integer" length="64" not-null="true"/>
+
+	</class>
+
+</hibernate-mapping>
